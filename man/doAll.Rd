@@ -9,10 +9,12 @@ The TRADER package provides only one way for disturbance reconstruction from tre
 %%  ~~ A concise (1-5 lines) description of what the function does. ~~
 }
 \usage{
-doAll(data, m1 = 10, m2 = 10, boundary = NULL, buffer = 2, 
-  criteria = 0.2, criteria2 = 0.5, segment = 0.5, segment2 = 0.5,
+doAll(data, m1 = 10, m2 = 10, abs.threshold = NULL, boundary = NULL, buffer = 2, 
+  criteriaNA = 0.2, criteria2NA = 0.5, 
+  criteriaBA = 0.2, criteria2BA = 0.5, segmentBA = 0.5, segment2BA = 0.5,
+  criteriaS = 0.2, criteria2S = 0.5, segmentS = 0.5, segment2S = 0.5,
   prefix = "all", gfun = mean, length = 2, notop = 10, notop2 = 10, 
-  storedev = jpeg, drawing=TRUE,...)
+  storedev = pdf, drawing=TRUE,...)
 }
 %- maybe also 'usage' for other objects documented here.
 \arguments{
@@ -24,22 +26,44 @@ doAll(data, m1 = 10, m2 = 10, boundary = NULL, buffer = 2,
   \item{m2}{Determines the number of years to be averaged (including target year) for period prior the potential releas.
 %%     ~~Describe \code{m2} here~~
 }
+  \item{abs.threshold}{Threshold of absolute-increase method.
+%%     ~~Describe \code{m2} here~~
+}
   \item{boundary}{Boundary line function of one argument, eg. \code{boundary=function(x) {5.0067*exp(-0.664*x)}}
 %%     ~~Describe \code{boundary} here~~
 }
   \item{buffer}{Number of years determining how close to one another two releases can be.
 %%     ~~Describe \code{buffer} here~~
 }
-  \item{criteria}{Threshold for detection of moderate release
+  \item{criteriaNA}{Threshold for detection of moderate release in NA method.
 %%     ~~Describe \code{criteria} here~~
 }
-  \item{criteria2}{Threshold for detection of major release.
+  \item{criteria2NA}{Threshold for detection of major release in NA method.
 %%     ~~Describe \code{criteria2} here~~
 }
-  \item{segment}{Determines length of the segment on which prior growth will be divided
+  \item{criteriaBA}{Threshold for detection of moderate release in BA method.
+%%     ~~Describe \code{criteria} here~~
+}
+  \item{criteria2BA}{Threshold for detection of major release in BA method.
+%%     ~~Describe \code{criteria2} here~~
+}
+  \item{criteriaS}{Threshold for detection of moderate release in S method.
+%%     ~~Describe \code{criteria} here~~
+}
+  \item{criteria2S}{Threshold for detection of major release in S method.
+%%     ~~Describe \code{criteria2} here~~
+}
+
+  \item{segmentBA}{Determines length of the segment on which prior growth will be divided in BA method.
 %%     ~~Describe \code{segment} here~~
 }
-  \item{segment2}{Determines length of the segment on which first mm of prior growth will be divided.
+  \item{segment2BA}{Determines length of the segment on which first mm of prior growth will be divided in BA method.
+%%     ~~Describe \code{segment2} here~~
+}
+  \item{segmentS}{Determines length of the segment on which prior growth will be divided in S method.
+%%     ~~Describe \code{segment} here~~
+}
+  \item{segment2S}{Determines length of the segment on which first mm of prior growth will be divided in S method.
 %%     ~~Describe \code{segment2} here~~
 }
   \item{prefix}{Prefix of saved files.
