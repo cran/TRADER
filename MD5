@@ -1,8 +1,8 @@
-a311e626370eb4aa958d52981ce7bb63 *DESCRIPTION
+569119a60accf03566e072da475e7c1b *DESCRIPTION
 c47da1af21ad6637bf9e3f6bef9d18f8 *NAMESPACE
-d477064b532c66783ba7a432b92b02da *R/trader.R
+a9fb2dd2a616fc1bad0f1a69db4acd5e *R/trader.R
 793e6c79247d05d6a2eac80c50ef6ee8 *data/relData.rda
-11b4226fd272d1aba63c6995396a314d *inst/CITATION
+c1f0dc23a85edf01c9d8073e6cdeba50 *inst/CITATION
 9db26d0f787cd01ddd783432af89ba0e *man/TRADER-package.Rd
 5231e0159c175c9bef833cc7695fcba1 *man/abrams.Rd
 6f0af378b398872fdda356b098e4b0a6 *man/absTreshold.Rd
